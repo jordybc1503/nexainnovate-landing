@@ -4,10 +4,9 @@ import { sanityClient, queries } from '@/lib/cms'
 
 export const revalidate = 3600
 export const fetchCache = 'force-cache'
-export const tags = ['blog']
 
 export default async function Page() {
-  const posts = await sanityClient.fetch(queries.allPosts, {}, { next: { tags } })
+  const posts = await sanityClient.fetch(queries.allPosts, {}, { next: { tags: ['blog'] } })
   return (
     <Section>
       <h1 className="text-3xl font-display mb-6">Blog</h1>

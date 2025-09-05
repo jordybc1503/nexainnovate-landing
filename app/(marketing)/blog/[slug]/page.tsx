@@ -4,10 +4,9 @@ import { PortableText } from '@portabletext/react'
 
 export const revalidate = 3600
 export const fetchCache = 'force-cache'
-export const tags = ['blog']
 
 export default async function Page({ params }: { params: { slug: string } }) {
-  const post = await sanityClient.fetch(queries.postBySlug, { slug: params.slug }, { next: { tags } })
+  const post = await sanityClient.fetch(queries.postBySlug, { slug: params.slug }, { next: { tags: ['blog'] } })
   if (!post) return <Section><div>Post no encontrado</div></Section>
   return (
     <Section>

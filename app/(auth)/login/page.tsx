@@ -19,7 +19,7 @@ export default function Page() {
     setLoading(true)
     const res = await signIn('credentials', { email, password, redirect: false, callbackUrl })
     setLoading(false)
-    if (res?.ok) router.push(callbackUrl)
+    if (res?.ok) router.push(callbackUrl as any)
     else alert('Error de autenticación')
   }
 

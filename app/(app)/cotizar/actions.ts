@@ -15,7 +15,14 @@ export async function createQuote(input: unknown) {
   const userId = session?.user?.id as string | undefined
   if (!userId) throw new Error('Unauthorized')
   const data = QuoteSchema.parse(input)
-  const quote = await db.quote.create({ data: { ...data, userId, status: 'SUBMITTED' } })
+  const quote = await db.quote.create({ 
+    data: { 
+      title: data.title,
+      details: data.details,
+      userId, 
+      status: 'SUBMITTED' 
+    } 
+  })
   return { id: quote.id }
 }
 

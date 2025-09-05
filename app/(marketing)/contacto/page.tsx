@@ -1,5 +1,7 @@
 import ContactForm from "@/components/ContactForm";
 
+export const runtime = "nodejs";
+
 export const metadata = {
   title: "Contacto | Nexa Innovate",
   description: "Contacta con nosotros para impulsar la transformación digital de tu empresa"

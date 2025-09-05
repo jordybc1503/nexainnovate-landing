@@ -6,6 +6,8 @@ import Button from '@/components/ui/Button'
 import { useState } from 'react'
 import { createQuote } from './actions'
 
+export const runtime = "nodejs";
+
 type Step = 1 | 2 | 3
 
 export default function Page() {
