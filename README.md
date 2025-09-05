@@ -236,4 +236,3 @@ sanity/{schemas}
 ## Notas
 - UI minimal fiel al look & feel: oscuro, acentos verdes, rounded-2xl, pill buttons.
 - Client Components sólo donde hay estado (navbar dropdown, forms, wizard).
-
