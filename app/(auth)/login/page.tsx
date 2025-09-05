@@ -4,9 +4,9 @@ import Input from '@/components/ui/Input'
 import Section from '@/components/ui/Section'
 import { signIn } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { useState } from 'react'
+import { useState, Suspense } from 'react'
 
-export default function Page() {
+function LoginForm() {
   const router = useRouter()
   const params = useSearchParams()
   const [email, setEmail] = useState('')
@@ -35,5 +35,13 @@ export default function Page() {
         </div>
       </form>
     </Section>
+  )
+}
+
+export default function Page() {
+  return (
+    <Suspense fallback={<div>Cargando...</div>}>
+      <LoginForm />
+    </Suspense>
   )
 }

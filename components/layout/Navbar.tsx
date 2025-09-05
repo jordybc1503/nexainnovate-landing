@@ -32,7 +32,7 @@ export default function Navbar() {
             {open && (
               <div className="absolute left-0 mt-3 w-[720px] grid grid-cols-2 lg:grid-cols-4 gap-3 p-4 rounded-2xl bg-bgSoft shadow-card border border-white/5">
                 {services.map((s) => (
-                  <Link key={s.href} href={s.href} className="p-3 rounded-xl hover:bg-white/5 text-sm text-textPrimary">
+                  <Link key={s.href} href={s.href as any} className="p-3 rounded-xl hover:bg-white/5 text-sm text-textPrimary">
                     {s.title}
                   </Link>
                 ))}

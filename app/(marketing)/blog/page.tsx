@@ -6,6 +6,16 @@ export const revalidate = 3600
 export const fetchCache = 'force-cache'
 
 export default async function Page() {
+  // Skip Sanity fetch during build if no project ID
+  if (!process.env.SANITY_PROJECT_ID || process.env.SANITY_PROJECT_ID === 'placeholder') {
+    return (
+      <Section>
+        <h1 className="text-3xl font-display mb-6">Blog</h1>
+        <p className="text-textMuted">Configure Sanity CMS to display blog posts.</p>
+      </Section>
+    )
+  }
+  
   const posts = await sanityClient.fetch(queries.allPosts, {}, { next: { tags: ['blog'] } })
   return (
     <Section>
