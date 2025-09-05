@@ -1,17 +1,17 @@
-import Section from '@/components/ui/Section'
-import Card from '@/components/ui/Card'
-import Button from '@/components/ui/Button'
-import Link from 'next/link'
+import Button from "@/components/ui/Button";
+import Card from "@/components/ui/Card";
+import Section from "@/components/ui/Section";
+import Link from "next/link";
 
 export default function MarketingDigitalPage() {
   return (
     <>
       <Section className="text-center">
-        <h1 className="text-4xl md:text-5xl font-display mb-6">
+        <h1 className="mb-6 font-display text-4xl md:text-5xl">
           Marketing Digital y <span className="text-brand-500">E-commerce</span>
         </h1>
-        <p className="text-xl text-textMuted max-w-3xl mx-auto mb-8">
-          Impulsamos tu presencia digital con estrategias de marketing efectivas 
+        <p className="mx-auto mb-8 max-w-3xl text-xl text-textMuted">
+          Impulsamos tu presencia digital con estrategias de marketing efectivas
           y plataformas de e-commerce que convierten.
         </p>
         <Link href="/cotizar">
@@ -22,14 +22,17 @@ export default function MarketingDigitalPage() {
       </Section>
 
       <Section>
-        <h2 className="text-3xl font-display text-center mb-10">Servicios de Marketing</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <h2 className="mb-10 text-center font-display text-3xl">
+          Servicios de Marketing
+        </h2>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <Card className="p-6">
-            <h3 className="text-xl font-semibold mb-3">SEO y SEM</h3>
-            <p className="text-textMuted mb-4">
-              Posicionamiento orgánico y campañas de pago para aumentar tu visibilidad online.
+            <h3 className="mb-3 text-xl font-semibold">SEO y SEM</h3>
+            <p className="mb-4 text-textMuted">
+              Posicionamiento orgánico y campañas de pago para aumentar tu
+              visibilidad online.
             </p>
-            <ul className="text-sm text-textMuted space-y-1">
+            <ul className="space-y-1 text-sm text-textMuted">
               <li>• Optimización SEO técnica</li>
               <li>• Google Ads y Meta Ads</li>
               <li>• Análisis de keywords</li>
@@ -37,11 +40,12 @@ export default function MarketingDigitalPage() {
           </Card>
 
           <Card className="p-6">
-            <h3 className="text-xl font-semibold mb-3">Redes Sociales</h3>
-            <p className="text-textMuted mb-4">
-              Gestión profesional de redes sociales para construir comunidades activas.
+            <h3 className="mb-3 text-xl font-semibold">Redes Sociales</h3>
+            <p className="mb-4 text-textMuted">
+              Gestión profesional de redes sociales para construir comunidades
+              activas.
             </p>
-            <ul className="text-sm text-textMuted space-y-1">
+            <ul className="space-y-1 text-sm text-textMuted">
               <li>• Estrategia de contenido</li>
               <li>• Community management</li>
               <li>• Publicidad social</li>
@@ -49,11 +53,12 @@ export default function MarketingDigitalPage() {
           </Card>
 
           <Card className="p-6">
-            <h3 className="text-xl font-semibold mb-3">E-commerce</h3>
-            <p className="text-textMuted mb-4">
-              Tiendas online optimizadas para conversión con experiencias de compra excepcionales.
+            <h3 className="mb-3 text-xl font-semibold">E-commerce</h3>
+            <p className="mb-4 text-textMuted">
+              Tiendas online optimizadas para conversión con experiencias de
+              compra excepcionales.
             </p>
-            <ul className="text-sm text-textMuted space-y-1">
+            <ul className="space-y-1 text-sm text-textMuted">
               <li>• Shopify y WooCommerce</li>
               <li>• Optimización de conversión</li>
               <li>• Integración con pagos</li>
@@ -61,11 +66,11 @@ export default function MarketingDigitalPage() {
           </Card>
 
           <Card className="p-6">
-            <h3 className="text-xl font-semibold mb-3">Email Marketing</h3>
-            <p className="text-textMuted mb-4">
+            <h3 className="mb-3 text-xl font-semibold">Email Marketing</h3>
+            <p className="mb-4 text-textMuted">
               Campañas automatizadas que nutren leads y fidelizan clientes.
             </p>
-            <ul className="text-sm text-textMuted space-y-1">
+            <ul className="space-y-1 text-sm text-textMuted">
               <li>• Automatización de flujos</li>
               <li>• Segmentación avanzada</li>
               <li>• A/B testing</li>
@@ -73,11 +78,12 @@ export default function MarketingDigitalPage() {
           </Card>
 
           <Card className="p-6">
-            <h3 className="text-xl font-semibold mb-3">Analytics</h3>
-            <p className="text-textMuted mb-4">
-              Medición y análisis de datos para optimizar continuamente tus resultados.
+            <h3 className="mb-3 text-xl font-semibold">Analytics</h3>
+            <p className="mb-4 text-textMuted">
+              Medición y análisis de datos para optimizar continuamente tus
+              resultados.
             </p>
-            <ul className="text-sm text-textMuted space-y-1">
+            <ul className="space-y-1 text-sm text-textMuted">
               <li>• Google Analytics 4</li>
               <li>• Dashboards personalizados</li>
               <li>• ROI y attribution</li>
@@ -85,11 +91,12 @@ export default function MarketingDigitalPage() {
           </Card>
 
           <Card className="p-6">
-            <h3 className="text-xl font-semibold mb-3">Marketing Automation</h3>
-            <p className="text-textMuted mb-4">
-              Automatización completa del funnel de marketing para maximizar conversiones.
+            <h3 className="mb-3 text-xl font-semibold">Marketing Automation</h3>
+            <p className="mb-4 text-textMuted">
+              Automatización completa del funnel de marketing para maximizar
+              conversiones.
             </p>
-            <ul className="text-sm text-textMuted space-y-1">
+            <ul className="space-y-1 text-sm text-textMuted">
               <li>• Lead scoring</li>
               <li>• Nutrición de prospectos</li>
               <li>• CRM integration</li>
@@ -98,14 +105,16 @@ export default function MarketingDigitalPage() {
         </div>
       </Section>
 
-      <Section className="bg-bgSoft rounded-3xl">
+      <Section className="rounded-3xl bg-bgSoft">
         <div className="text-center">
-          <h2 className="text-3xl font-display mb-6">Acelera tu crecimiento digital</h2>
-          <p className="text-textMuted mb-8 max-w-2xl mx-auto">
-            Nuestro equipo de especialistas en marketing digital te ayudará a alcanzar 
-            tus objetivos de crecimiento con estrategias data-driven.
+          <h2 className="mb-6 font-display text-3xl">
+            Acelera tu crecimiento digital
+          </h2>
+          <p className="mx-auto mb-8 max-w-2xl text-textMuted">
+            Nuestro equipo de especialistas en marketing digital te ayudará a
+            alcanzar tus objetivos de crecimiento con estrategias data-driven.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <Link href="/contacto">
               <Button className="bg-brand-600 hover:bg-brand-700">
                 Consulta Gratuita
@@ -120,5 +129,5 @@ export default function MarketingDigitalPage() {
         </div>
       </Section>
     </>
-  )
+  );
 }
