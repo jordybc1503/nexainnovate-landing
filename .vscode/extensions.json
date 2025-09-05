@@ -1,0 +1,21 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "ms-playwright.playwright",
+    "prisma.prisma",
+    "ms-vscode.vscode-typescript-next",
+    "zignd.html-css-class-completion",
+    "formulahendry.auto-rename-tag",
+    "bradlc.vscode-tailwindcss",
+    "christian-kohler.path-intellisense",
+    "ms-vscode.vscode-json",
+    "EditorConfig.EditorConfig",
+    "ms-vscode.vscode-eslint",
+    "yoavbls.pretty-ts-errors",
+    "usernamehw.errorlens",
+    "gruntfuggly.todo-tree",
+    "ms-vscode.vscode-typescript-next"
+  ]
+}

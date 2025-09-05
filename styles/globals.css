@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body, #__next { height: 100%; }
+body { background: theme('colors.bgBase'); color: theme('colors.textPrimary'); }
+
+/* Decorative corner patterns */
+.corner-pattern {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  pointer-events: none;
+  opacity: .12;
+}
+.hero-overlay { background: linear-gradient(180deg, rgba(10,10,10,.65), rgba(10,10,10,.9)); }
+

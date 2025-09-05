@@ -1,0 +1,32 @@
+# Ignore artifacts:
+build/
+dist/
+out/
+coverage/
+
+# Ignore node_modules:
+node_modules/
+
+# Ignore lock files:
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Ignore generated files:
+.next/
+*.tsbuildinfo
+
+# Ignore environment files:
+.env*
+!.env.example
+
+# Ignore Prisma generated files:
+prisma/migrations/
+
+# Ignore test coverage:
+coverage/
+*.lcov
+
+# Ignore Playwright:
+test-results/
+playwright-report/
