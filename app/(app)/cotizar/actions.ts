@@ -1,8 +1,8 @@
 "use server"
 
-import { z } from 'zod'
 import { auth } from '@/lib/auth'
 import { db } from '@/lib/db'
+import { z } from 'zod'
 
 const QuoteSchema = z.object({
   title: z.string().min(3),
@@ -15,14 +15,13 @@ export async function createQuote(input: unknown) {
   const userId = session?.user?.id as string | undefined
   if (!userId) throw new Error('Unauthorized')
   const data = QuoteSchema.parse(input)
-  const quote = await db.quote.create({ 
-    data: { 
+  const quote = await db.quote.create({
+    data: {
       title: data.title,
       details: data.details,
-      userId, 
-      status: 'SUBMITTED' 
-    } 
+      userId,
+      status: 'SUBMITTED'
+    }
   })
   return { id: quote.id }
 }
-

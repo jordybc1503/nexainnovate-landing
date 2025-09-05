@@ -1,5 +1,5 @@
 import Section from '@/components/ui/Section'
-import { sanityClient, queries } from '@/lib/cms'
+import { queries, sanityClient } from '@/lib/cms'
 import { PortableText } from '@portabletext/react'
 
 export const revalidate = 3600
@@ -19,4 +19,3 @@ export default async function Page({ params }: { params: { slug: string } }) {
     </Section>
   )
 }
-

@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -46,4 +46,3 @@ jobs:
           DATABASE_URL: "postgresql://test:test@localhost:5432/test?sslmode=disable"
           NEXTAUTH_SECRET: "test-secret"
           NEXTAUTH_URL: "http://localhost:3000"
-

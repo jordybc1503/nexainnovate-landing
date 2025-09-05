@@ -1,8 +1,8 @@
 "use server";
 
-import { ContactSchema } from "@/lib/validations/contact";
 import { db } from "@/lib/db";
 import { sendContactEmail } from "@/lib/email";
+import { ContactSchema } from "@/lib/validations/contact";
 
 export type ContactActionResult = {
   ok: boolean;

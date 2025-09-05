@@ -46,7 +46,7 @@ try {
     'SANITY_PROJECT_ID',
     'SANITY_DATASET'
   ];
-  
+
   requiredVars.forEach(envVar => {
     const exists = envExample.includes(envVar);
     console.log(`${exists ? '✅' : '❌'} ${envVar}`);

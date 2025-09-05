@@ -1,6 +1,6 @@
-import Section from '@/components/ui/Section'
-import { auth } from '@/lib/auth'
-import { listUserQuotes } from '@/lib/services/quotes'
+import Section from '@/components/ui/Section';
+import { auth } from '@/lib/auth';
+import { listUserQuotes } from '@/lib/services/quotes';
 
 export const runtime = "nodejs";
 export const dynamic = 'force-dynamic'
@@ -25,4 +25,3 @@ export default async function Page() {
     </Section>
   )
 }
-

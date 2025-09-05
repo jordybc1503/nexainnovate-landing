@@ -1,6 +1,6 @@
 import Section from '@/components/ui/Section'
+import { queries, sanityClient } from '@/lib/cms'
 import Link from 'next/link'
-import { sanityClient, queries } from '@/lib/cms'
 
 export const revalidate = 3600
 export const fetchCache = 'force-cache'

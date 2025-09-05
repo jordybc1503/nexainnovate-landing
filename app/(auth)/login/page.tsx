@@ -1,10 +1,10 @@
 "use client"
+import Button from '@/components/ui/Button'
+import Input from '@/components/ui/Input'
+import Section from '@/components/ui/Section'
 import { signIn } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useState } from 'react'
-import Section from '@/components/ui/Section'
-import Input from '@/components/ui/Input'
-import Button from '@/components/ui/Button'
 
 export default function Page() {
   const router = useRouter()
@@ -37,4 +37,3 @@ export default function Page() {
     </Section>
   )
 }
-
