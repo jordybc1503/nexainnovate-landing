@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server'
 import { db } from '@/lib/db'
 import { hash } from 'bcryptjs'
 
+export const runtime = "nodejs";
+
 export async function POST(req: Request) {
   try {
     const { name, email, password } = await req.json()

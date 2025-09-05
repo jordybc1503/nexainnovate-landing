@@ -95,6 +95,49 @@ npm run test:ui
 
 ## 🚢 Production Deployment
 
+### 🆓 Free Tier Setup (Neon + Vercel)
+
+This project is optimized for **completely free deployment** using:
+- **Database**: [Neon](https://neon.tech) PostgreSQL (free tier: 3 GB storage)
+- **Hosting**: [Vercel](https://vercel.com) (free tier: unlimited hobby projects)
+
+#### Step 1: Setup Neon Database
+
+1. Go to [neon.tech](https://neon.tech) and create a free account
+2. Create a new project (select closest region)
+3. Copy the **pooled connection string** from dashboard
+4. The connection string should look like:
+   ```
+   postgresql://USER:PASS@HOST/DB?sslmode=require
+   ```
+
+#### Step 2: Deploy to Vercel
+
+1. Push your code to GitHub
+2. Go to [vercel.com](https://vercel.com) and connect your GitHub account
+3. Import your repository
+4. Configure environment variables in Vercel dashboard:
+   - `DATABASE_URL`: Your Neon connection string
+   - `NEXTAUTH_SECRET`: Generate with `openssl rand -base64 32`
+   - `NEXTAUTH_URL`: Your Vercel app URL (e.g., `https://your-app.vercel.app`)
+   - Add any other required environment variables from `.env.example`
+
+5. Deploy! Vercel will automatically:
+   - Install dependencies with `pnpm install`
+   - Generate Prisma client with `postinstall` hook
+   - Run database migrations with `prisma migrate deploy`
+   - Build the application with `next build`
+
+#### Step 3: Database Migration
+
+The build process automatically runs `prisma migrate deploy`, so your database schema will be applied during deployment.
+
+For the first deployment, you may want to seed the database:
+```bash
+# After first successful deployment, run locally:
+DATABASE_URL="your-neon-connection-string" pnpm db:seed
+```
+
 ### Vercel (Recommended)
 
 1. Push code to GitHub/GitLab

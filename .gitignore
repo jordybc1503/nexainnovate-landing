@@ -94,6 +94,10 @@ temp/
 prisma/migrations/
 !prisma/migrations/.gitkeep
 
+# Vercel
+.vercel
+*.vercel
+
 # Playwright
 /test-results/
 /playwright-report/

@@ -1,7 +1,7 @@
 "use server";
 
 import { ContactSchema } from "@/lib/validations/contact";
-// import { db } from "@/lib/db";
+import { db } from "@/lib/db";
 import { sendContactEmail } from "@/lib/email";
 
 export type ContactActionResult = {
@@ -27,16 +27,16 @@ export async function submitContact(formData: FormData): Promise<ContactActionRe
   const data = parsed.data;
 
   try {
-    // TODO: Descomentar cuando la DB esté lista
-    // await db.contactMessage.create({
-    //   data: {
-    //     nombre: data.nombre,
-    //     email: data.email,
-    //     empresa: data.empresa || null,
-    //     servicio: data.servicio,
-    //     mensaje: data.mensaje,
-    //   }
-    // });
+    // Persistir en BD
+    await db.contactMessage.create({
+      data: {
+        nombre: data.nombre,
+        email: data.email,
+        empresa: data.empresa || null,
+        servicio: data.servicio,
+        mensaje: data.mensaje,
+      }
+    });
 
     // Enviar correo (por ahora stub/simulación)
     await sendContactEmail(data);
